@@ -14,24 +14,24 @@
 7. [vue.js](https://github.com/vuejs/vue)
 
 # 项目运行环境搭建
-拉取项目运行需要的环境镜像
+1. 拉取项目运行需要的环境镜像
 
 `docker pull cadquery/cadquery`
 
-根据镜像创建并运行项目环境,-v中的djangoLocalPath为django项目实际计算机中的绝对路径
+2. 根据镜像创建并运行项目环境,-v中的djangoLocalPath为django项目实际计算机中的绝对路径
 
 `docker run -it -v djangoLocalPath:/cadquery/djangoProject --name=cadquery -p:8888 bash`
 
-安装python软件包管理工具pip
+3. 安装python软件包管理工具pip
 
 `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
 `python get-pip.py`
 
-切换到docker容器中的django项目目录下
+4. 切换到docker容器中的django项目目录下
 
 `cd /cadquery/djangoProject`
 
-启动服务(会出现缺少模块的提示,请使用 `pip install xx` 安装相应模块)
+5. 启动服务(会出现缺少模块的提示,请使用 `pip install xx` 安装相应模块)
 
 `python manage.py runserver 0.0.0.0:8888`
 
